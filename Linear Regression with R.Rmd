@@ -1,0 +1,101 @@
+---
+title: "ML project - Linear Regression"
+output: html_document
+    df_print: paged
+---
+
+```{r}
+df <- read.csv('C:/Users/JUN/Desktop/Training Exercises/Machine Learning Projects/CSV files for ML Projects/bikeshare.csv')
+```
+
+Exploratory Data Analysis
+```{r}
+library(ggplot2)
+ggplot(df, aes(x=temp, y= count)) + geom_point(aes(color = temp), alpha = .5)
+
+df$datetime <- as.POSIXct(df$datetime)
+ggplot(df, aes(x=datetime, y= count)) + geom_point(aes(color=temp), alpha = .5) + scale_colour_gradient(low = 'blue', high = 'red')
+```
+
+Correlation between temperature and bike rentals.
+```{r}
+cor(df[,c('temp','count')])
+```
+
+The number of bike rentals are increasing in general over the years and there is a clear seasonality within bike rentals.
+
+```{r}
+ggplot(df, aes(x= factor(season), y = count)) + geom_boxplot(aes(color = factor(season)))
+```
+
+The boxplot of season depicts winter having more rentals than spring which is counter-intuitive. The discrepancy is due to the general increase in bike rentals. 
+
+To check hourly bike rental trend in weekdays, we create a new feature.
+```{r}
+df$hour <- format(df$datetime, '%H')
+df$hour <- sapply(df$hour,as.numeric)
+weekdays <- subset(df, workingday==1)
+ggplot(weekdays, aes(x=hour, y=count)) + geom_point(aes(color=temp), position = position_jitter(w=1, h=0)) + scale_color_gradientn(colors = c('dark blue', 'blue', 'green','yellow','red'))
+```
+
+On the weekends.
+```{r}
+weekends <- subset(df, workingday==0)
+ggplot(weekends, aes(x=hour, y=count)) + geom_point(aes(color=temp), position = position_jitter(w=1, h=0)) + scale_color_gradientn(colors = c('blue', 'green','yellow','red'))
+```
+
+## Linear regression algorithm
+```{r}
+temp.model <- lm(count ~ temp, df)
+summary(temp.model)
+```
+
+Observing residuals.
+```{r}
+res <- residuals(temp.model)
+res <- as.data.frame(res)
+ggplot(res, aes(res)) + geom_histogram()
+```
+Residuals's distribution is skewed to the right, hence there is a non-linearity.
+
+Splitting data to see how well the linear regression can predict the rentals.
+```{r}
+test.index <- 1:7000
+test.data <- df[-test.index,]
+train.data <- df[test.index,]
+```
+
+Modelling with more features.
+```{r}
+model2 <- lm(count ~ ., train.data[, c(-1, -7, -10, -11)])
+summary(model2)
+predict2 <- predict(model2, test.data[, c(-1, -7, -10, -11)])
+results <- cbind(predict2, test.data$count)
+colnames(results) <- c('pred','real')
+results <- as.data.frame(results)
+head(results)
+```
+
+Evaluating predicted values with MSE
+```{r}
+mse <- mean((results$real - results$pred)^2)
+mse
+```
+
+Evaluating with R squared. 
+```{r}
+SSE = sum((results$pred - results$real)^2)
+SST = sum( (mean(df$count) - results$real)^2)
+R2 = 1 - SSE/SST
+R2
+```
+
+Linear Regression does not perfrom well given our time series data with seasonality. (Random forest should work better.)
+
+Additional Note : PREPARING THE TIME DATA
+
+When Timestamp data is imported, it is a character string. first, we apply as.POSIXct function to change the data class into a timestamp.
+
+Then, we can apply the format function to only list the hours by referencing '%H' thanks to the as.POSIXct function as it is in the appropirate TIME format to recognize the reference of '%H'. 
+
+However, the hour column is now in a character format, hence should be transformed into numeric for analysis.
