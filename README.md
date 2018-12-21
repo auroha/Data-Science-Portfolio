@@ -1,2 +1,7 @@
 # Data Science Portfolio
-My portfolio of data science projects completed for learning and hobby purposes  .
+
+
+Repository containing portfolio of data science projects completed by me for self-learning purposes. Presented in the form R markdown files published at RPubs.
+
+
+http://rpubs.com/LeeJunHan/450898
