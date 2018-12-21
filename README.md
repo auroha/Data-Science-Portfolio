@@ -13,3 +13,7 @@ Repository containing portfolio of data science projects completed by me for sel
   - [Decision Trees & Random Forest : College | ISLR](http://rpubs.com/LeeJunHan/451869) : This project include exploring the use of tree methods to classify schools as Private or Public based off their features. The gini coefficient is also presented in random forest analysis to get a grasp on the extent the features contributed to the classification. 
   - [Neural Network : Bank Authentication | UCI Learning Depository](http://rpubs.com/LeeJunHan/451463) : This project, we use the neural network algorithm to estimate whether the bank notes were authentic or fake. The dataset contain information of wavelet transformation, which roughly translates to the change in frequency of signals when there is a high-contrast in colors of the image. Random Forest is also conducted to legitimize the Neural Network's result. 
   - [Natural Language Processing : Twiitter](http://rpubs.com/LeeJunHan/451880) : An exercise to connect and import real-time data from twitter to form a wordcloud. A follow-along exercise to uderstand how NLP works in R. 
+  
+  
+  
+  
