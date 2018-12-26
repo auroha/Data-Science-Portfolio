@@ -4,6 +4,14 @@
 Repository containing portfolio of data science projects completed by me for self-learning purposes. Presented in the form R markdown files published at RPubs.
 
 
+- ### Data Analysis & Visualization with R
+   - [Black Friday |  Analytics Vidhya ](http://rpubs.com/LeeJunHan/454168) : Predicting sales based on cutomer attribute. Data was retrieved from Analytics Vidhya as a practice problem. Extensive EDA with Linear Regression and Decision Trees machine learning algorithms.
+   - [Moneyball | Seanlehman.com](http://rpubs.com/LeeJunHan/453841) : Replacing lost players as an Auckland A's Manager. Used linear programming package to narrow down the best replacement.
+   - [Corruption and Human Development | The Economist](http://rpubs.com/LeeJunHan/453686) : Replicating the Corrosive corruption Article graph released by the Economist in 2011, plotting the Human Development Index and Corruption Perception Index.
+  
+  
+
+
 - ### Machine Learning with R
   - [Linear Regression : Bike Sharing Demand | Kaggle](http://rpubs.com/LeeJunHan/450898): Predicting the total count of bikes rented during each hour using only information available prior to the rental period. This project inlcuded extensive Exploratory Data Analysis and discovering how linear regression analysis is unfit for time-series and non-linear data. 
   - [Logistic Regression : Adult Salary | UCI Learning Depository](http://rpubs.com/LeeJunHan/450142) : Attempting to predict if adults in the data set belong to a certain salary class, either making <=50k or >50k per year. This project included preparing and cleaning the data for analysis.
@@ -12,9 +20,6 @@ Repository containing portfolio of data science projects completed by me for sel
   - [Support Vector Machine : Lending | Lendingclub](http://rpubs.com/LeeJunHan/450085) : Using publicly available lending data from 2007-2010 to classify and predict whether or not the borrower paid back their loan in full. This project include taking advantage of the kernel trick with SVM, tuning the parameters accordingly to achieve the best results.
   - [Decision Trees & Random Forest : College | ISLR](http://rpubs.com/LeeJunHan/451869) : This project include exploring the use of tree methods to classify schools as Private or Public based off their features. The gini coefficient is also presented in random forest analysis to get a grasp on the extent the features contributed to the classification. 
   - [Neural Network : Bank Authentication | UCI Learning Depository](http://rpubs.com/LeeJunHan/451463) : This project, we use the neural network algorithm to estimate whether the bank notes were authentic or fake. The dataset contain information of wavelet transformation, which roughly translates to the change in frequency of signals when there is a high-contrast in colors of the image. Random Forest is also conducted to legitimize the Neural Network's result. 
-  - [Natural Language Processing : Twiitter](http://rpubs.com/LeeJunHan/451880) : An exercise to connect and import real-time data from twitter to form a wordcloud. A follow-along exercise to uderstand how NLP works in R. 
+  - [Natural Language Processing : Word Cloud | Twiitter](http://rpubs.com/LeeJunHan/451880) : An exercise to connect and import real-time data from twitter to form a wordcloud. A follow-along exercise to uderstand how NLP works in R. 
  
- - ### Data Visualization with R
-   - [Corruption and Human Development | The Economist](http://rpubs.com/LeeJunHan/453686) : Replicating the Corrosive corruption Article graph released by the Economist in 2011, plotting the Human Development Index and Corruption Perception Index.
-  
-  
+ 
