@@ -15,6 +15,6 @@ Repository containing portfolio of data science projects completed by me for sel
   - [Natural Language Processing : Twiitter](http://rpubs.com/LeeJunHan/451880) : An exercise to connect and import real-time data from twitter to form a wordcloud. A follow-along exercise to uderstand how NLP works in R. 
  
  - ### Data Visualization with R
-   - [Corruption and Human Development | The Economist](http://rpubs.com/LeeJunHan/453686) : Replicating the Corrosive corruption Article graph released by the Economist in 2011, plotting the Human Development Index and Corruption Perception Index. The graph represents the extent to which corruption is related to the general standard of living of the countires.   
+   - [Corruption and Human Development | The Economist](http://rpubs.com/LeeJunHan/453686) : Replicating the Corrosive corruption Article graph released by the Economist in 2011, plotting the Human Development Index and Corruption Perception Index.
   
   
