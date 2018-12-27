@@ -6,7 +6,7 @@ Repository containing portfolio of data science projects completed by me for sel
 
 - ### Data Analysis & Visualization with R
    - [Black Friday |  Analytics Vidhya ](http://rpubs.com/LeeJunHan/454168) : Predicting sales based on cutomer attribute. Data was retrieved from Analytics Vidhya as a practice problem. Extensive EDA with Linear Regression and Decision Trees machine learning algorithms.
-   - [Moneyball | Seanlehman.com](http://rpubs.com/LeeJunHan/453841) : Replacing lost players as an Auckland A's Manager. Used linear programming package to narrow down the best replacement.
+   - [Moneyball | Seanlehman.com](http://rpubs.com/LeeJunHan/453841) : Replacing lost players as an Auckland A's Manager. Used linear programming to narrow down the best replacements.
    - [Corruption and Human Development | The Economist](http://rpubs.com/LeeJunHan/453686) : Replicating the Corrosive corruption Article graph released by the Economist in 2011, plotting the Human Development Index and Corruption Perception Index.
   
   
