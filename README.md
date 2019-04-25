@@ -5,6 +5,7 @@ A repository containing a portfolio of data science projects completed by me for
 
 
 - ### Data Analysis & Visualization with R
+   - [Culture Chart | Hofstede ](http://rpubs.com/LeeJunHan/490210): Hierarchial clustering of countries based on culture and its dendrogram 
    - [Black Friday |  Analytics Vidhya ](http://rpubs.com/LeeJunHan/454168): Predicting sales based on customer attribute. The analysis includes Extensive EDA with Linear Regression and Decision Trees machine learning algorithms.
    - [Moneyball | Seanlahaman.com](http://rpubs.com/LeeJunHan/453841): Replacing lost key players as an Auckland A's Manager. Used linear programming pacakge (lpSolve) to narrow down the best replacements.
    - [Corruption and Human Development | The Economist](http://rpubs.com/LeeJunHan/453686): Replicating the "Corrosive corruption" article's graph released by the Economist in 2011, plotting the Human Development Index against the Corruption Perception Index.
